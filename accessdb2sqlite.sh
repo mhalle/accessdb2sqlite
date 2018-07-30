@@ -13,6 +13,11 @@ fi
 ACCESSDB="$1"
 SQLITEDB="$2"
 
+if [ -f "${SQLITEDB}" ]; then
+    echo "$0: error: sqlite db file ${SQLITEDB} exists."
+    exit 1
+fi
+
 # extract metadata from accessdb
 schema=$(mdb-schema "${ACCESSDB}" sqlite)
 if [ $? -ne 0 ]; then
