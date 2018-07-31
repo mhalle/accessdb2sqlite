@@ -3,6 +3,7 @@
 # converts Microsoft Access Databases to sqlite3 databases
 # specific to data from Partners Healthcate 
 # (removes one strange comment table)
+# requires sqlite3 and mdbtools (https://github.com/brianb/mdbtools)
 # mhalle@bwh.harvard.edu    2018-07-30
 
 if [ $# -ne 2 ]; then
